@@ -1,0 +1,23 @@
+In this sprint meeting, Members are:
+{% for member in members %}
+- Name: {{ member.name }}
+  Id: {{ member.id }}
+  Role: {{ member.role }}
+  Email: {{ member.email }}
+{% endfor %}
+
+Current sprint contains:
+{% for sprint_item in sprint_details %}
+- Ticket: {{ sprint_item.ticket_number }}
+  Title: {{ sprint_item.title }}
+  Product Manager: {{ sprint_item.product_manager }}
+  Developers: {{ sprint_item.developers | join(', ') }}
+  QA: {{ sprint_item.qa }}
+  Start Date: {{ sprint_item.start_date }}
+  End Date: {{ sprint_item.end_date }}
+  Dev Start Date: {{ sprint_item.dev_start_date }}
+  Dev End Date: {{ sprint_item.dev_end_date }}
+  Stage: {{ sprint_item.stage }}
+  Owned By: {{ sprint_item.owned_by }}
+
+{% endfor %}
